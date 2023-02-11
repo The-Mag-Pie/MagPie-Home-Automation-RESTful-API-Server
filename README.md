@@ -8,3 +8,6 @@ Implemented functionalities:
 3. Create TCP connections
 4. Make HTTP requests
 5. Create new process in system
+
+TODO:
+1. Dynamic API key

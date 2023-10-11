@@ -7,7 +7,7 @@ namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.CentralHeating.S
     [ApiController]
     public class Toggle : ControllerBase
     {
-        private const string APIURL = "http://127.0.0.1:8123/toggle";
+        private const string APIURL = "http://172.17.0.2:8123/toggle";
 
         [HttpGet]
         public IActionResult Get()

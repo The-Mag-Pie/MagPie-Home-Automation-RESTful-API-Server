@@ -7,7 +7,7 @@ namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.CentralHeating.S
     [ApiController]
     public class State : ControllerBase
     {
-        private const string APIURL = "http://127.0.0.1:8123/getstatus";
+        private const string APIURL = "http://172.17.0.2:8123/getstatus";
 
         private class ResponseModel
         {

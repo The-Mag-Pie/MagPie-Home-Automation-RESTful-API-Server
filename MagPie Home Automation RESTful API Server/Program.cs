@@ -11,6 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddLogging(builder =>
+    builder
+        .AddDebug()
+        .AddConsole()
+        .SetMinimumLevel(LogLevel.Trace));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

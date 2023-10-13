@@ -7,7 +7,7 @@ namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.CentralHeating.S
     [ApiController]
     public class State : ControllerBase
     {
-        private const string APIURL = "http://ewelink-proxy-server:8123/getstatus";
+        private static readonly string APIURL = $"{Helpers.URL}/getstatus";
 
         private class ResponseModel
         {

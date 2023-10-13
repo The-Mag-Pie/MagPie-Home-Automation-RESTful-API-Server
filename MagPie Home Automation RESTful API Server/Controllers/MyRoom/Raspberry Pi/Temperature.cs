@@ -17,6 +17,11 @@ namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.MyRoom.Raspberry
         [HttpGet]
         public IActionResult Get()
         {
+            return StatusCode(StatusCodes.Status503ServiceUnavailable, new EndpointResponse(false)
+            {
+                Message = "Service temporarily unavailable"
+            });
+
             double temp1, temp2;
 
             var process = new Process();

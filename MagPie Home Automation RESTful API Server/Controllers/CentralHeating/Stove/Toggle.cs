@@ -7,7 +7,7 @@ namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.CentralHeating.S
     [ApiController]
     public class Toggle : ControllerBase
     {
-        private const string APIURL = "http://ewelink-proxy-server:8123/toggle";
+        private static readonly string APIURL = $"{Helpers.URL}/toggle";
 
         [HttpGet]
         public IActionResult Get()

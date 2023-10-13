@@ -7,7 +7,14 @@ namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.CentralHeating
     [ApiController]
     public class WaterTemperature : ControllerBase
     {
-        private const string SensorURL = "http://192.168.1.11/temp";
+        private static string SensorURL
+        {
+            get
+            {
+                var envvar = Environment.GetEnvironmentVariable("WATER_TEMP_SENSOR_URL");
+                return envvar ?? throw new ArgumentNullException("Missing WATER_TEMP_SENSOR_URL environment variable");
+            }
+        }
 
         private class ResponseModel
         {

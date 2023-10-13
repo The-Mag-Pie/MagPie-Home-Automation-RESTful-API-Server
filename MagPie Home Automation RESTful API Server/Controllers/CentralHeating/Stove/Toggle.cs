@@ -1,6 +1,5 @@
 ﻿using MagPie_Home_Automation_RESTful_API_Server.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
 
 namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.CentralHeating.Stove
 {
@@ -31,7 +30,7 @@ namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.CentralHeating.S
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new EndpointResponse(false)
                 {
-                    Message = JsonSerializer.Serialize(e)
+                    Message = e.Message
                 });
             }
         }

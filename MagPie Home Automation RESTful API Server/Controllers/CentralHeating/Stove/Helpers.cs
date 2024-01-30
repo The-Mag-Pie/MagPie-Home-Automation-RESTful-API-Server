@@ -2,13 +2,8 @@
 {
     public class Helpers
     {
-        public static string URL
-        {
-            get
-            {
-                var envvar = Environment.GetEnvironmentVariable("EWELINK_PROXY_URL");
-                return envvar ?? "http://127.0.0.1:8123";
-            }
-        }
+        public static string URL => Environment.GetEnvironmentVariable("EWELINK_PROXY_URL") ?? "http://127.0.0.1:8123";
+
+        public static string DeviceID => Environment.GetEnvironmentVariable("EWELINK_DEVICE_ID") ?? "10006ccbb6";
     }
 }

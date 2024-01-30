@@ -7,7 +7,7 @@ namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.CentralHeating.S
     [ApiController]
     public class State : ControllerBase
     {
-        private static readonly string APIURL = $"{Helpers.URL}/state";
+        private static readonly string APIURL = $"{Helpers.URL}/state/{Helpers.DeviceID}";
 
         private class ResponseModel
         {

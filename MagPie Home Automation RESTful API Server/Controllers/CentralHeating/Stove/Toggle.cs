@@ -7,7 +7,7 @@ namespace MagPie_Home_Automation_RESTful_API_Server.Controllers.CentralHeating.S
     [ApiController]
     public class Toggle : ControllerBase
     {
-        private static readonly string APIURL = $"{Helpers.URL}/toggle";
+        private static readonly string APIURL = $"{Helpers.URL}/toggle/{Helpers.DeviceID}";
 
         [HttpGet]
         public IActionResult Get()
